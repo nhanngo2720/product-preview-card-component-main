@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+    padding: 100px 30px;
+    }
+
+.wrapper{
+    display:grid;
+    grid-template-columns: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 8px ;
+    /* de day thu sau nay bo xuong duoi cuoi */
+    grid-template-columns:repeat(2, 1fr) ; 
+    /* nghia la 2 columns va 2 column bang nhau1 fr */   
+}
+.item{
+    padding: 30px;
+}
+.item2 h3{
+    font-size: 14px;
+    font-weight: 500;
+}
+.item2 h1{
+    font-size: 28px;
+    font-weight: 700;
+}
+.item2 p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.item3 p1{
+    font-size: 28px;
+    font-weight: 700;
+}
+.button add-to-cart{
+    color: rgb(109, 15, 15);
+    text-align: center;
+}
