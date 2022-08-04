@@ -1,45 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+/* - Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
 
-section{
-    min-height: 100vh;
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700
+- Font size (paragraph): 14px
+ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Montserrat:ital,wght@0,700;1,400&display=swap');
+
+/* https://www.youtube.com/watch?v=aoB6cloAB1E */
+
+/* main */
+body {
     width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 550px;
+    margin: 0 15px;
+    height: 440px;
     background-color: hsl(0, 0%, 100%);
-    padding: 100px 30px;
+    /* de day thu sau nay bo xuong duoi cuoi */
+    /* nghia la 2 columns va 2 column bang nhau1 fr */
+}
+
+.container .wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+/* image */
+.image {
+    width: 50%;
+    height: 100%;
+    display: block;
+    float: left;
+    overflow: hidden;
+
+
+}
+/* hien thi full anh */
+.image img{ 
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+/* text content */
+.text-content{
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+.preview {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+}
+
+.header{
+    color: hsl(212, 21%, 14%);
+    font-family: "Fraunces", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.detail{
+    font-family: "Fraunces", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    padding: 25px 0;
+    line-height: 1.7;
+}
+
+.price{
+    font-family: "Fraunces", sans-serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 28px;
+    font-weight: 700;
+    position: relative;
+}
+
+.price span{ 
+    font-family: "Fraunces", sans-serif;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    padding-left: 17px;
+    position: absolute;
+}
+
+.btn{
+    padding: 10px 0;
+    width: 100%;
+    display: inline-block;
+    background-color: hsl(158, 36%, 37%);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-top: 25px;
+ 
+}
+
+.btn:hover {
+    background-color: hsl(158, 31%, 86%);
+}
+
+.btn span{
+    color: rgb(253, 254, 255);
+    font-family: "Fraunces", sans-serif;
+    padding-right: 7px;
     }
 
-.wrapper{
-    display:grid;
-    grid-template-columns: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 8px ;
-    /* de day thu sau nay bo xuong duoi cuoi */
-    grid-template-columns:repeat(2, 1fr) ; 
-    /* nghia la 2 columns va 2 column bang nhau1 fr */   
-}
-.item{
-    padding: 30px;
-}
-.item2 h3{
-    font-size: 14px;
-    font-weight: 500;
-}
-.item2 h1{
-    font-size: 28px;
-    font-weight: 700;
-}
-.item2 p{
-    font-size: 14px;
-    font-weight: 500;
-}
-.item3 p1{
-    font-size: 28px;
-    font-weight: 700;
-}
-.button add-to-cart{
-    color: rgb(109, 15, 15);
-    text-align: center;
+
+
+/* responsive design for mobile screen 375px width */
+@media screen and (max-width: 376px) {
+    .container{
+        height: auto;
+    }
+
+    .image {
+        width: 100%;
+        height: 250px;
+    }
+    .image mobile-img{
+        display: block;
+    }
+    .image desktop-img{
+        display: none;
+    }
+
+    .text-content{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .header{
+        line-height: 0.9;
+    }
+
+    .detail {
+        padding-top: 20px;
+        padding-bottom: 35px;
+    }
+
 }
